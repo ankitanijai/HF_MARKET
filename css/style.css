@@ -1,0 +1,495 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+  
+  .btn.login {
+    background: transparent;
+    color: #000;
+  }
+  
+  .btn.register {
+    background: #d92027;
+    color: #fff;
+  }
+  
+  .btn.join-now {
+    background: #d92027;
+    color: #fff;
+    margin-top: 1rem;
+  }
+  
+  /* Header */
+  .header {
+    background: #f8f8f8;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .top-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .top-links a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .flag-icon {
+    width: 24px;
+    height: auto;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  
+  .logo {
+    width: 150px;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .main-nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+.hero-section {
+    background-image: url('images/mainimage.svg'); /* <-- Your exported image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.3); /* Optional transparent black layer */
+    width: 100%;
+    height: 100%;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .hero-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .form-left, .form-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+  }
+  
+  .hero-form input, 
+  .hero-form select {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .phone-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .phone-input input:first-child {
+    width: 80px;
+  }
+  
+  .phone-input input:last-child {
+    flex: 1;
+  }
+  
+  .checkbox {
+    font-size: 14px;
+    text-align: left;
+    color: white;
+  }
+  
+  .checkbox a {
+    color: #ffcc00;
+    text-decoration: underline;
+  }
+  
+  .join-now {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .join-now button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-form {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-left, .form-right {
+      width: 90%;
+    }
+  }
+    
+  /* Prizes Section */
+  .prizes {
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .prizes h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .prize-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .prize-card {
+    background: #fafafa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 250px;
+  }
+  
+  .prize-card img {
+    width: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .prize-card h3 {
+    color: #d92027;
+  }
+  
+  /* Winners Section */
+  .winners {
+    background: #f5f5f5;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .winners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .winners-left, .winners-right {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .winner-card {
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .winner-card h4 {
+    color: #d92027;
+    margin-bottom: 0.5rem;
+  }
+  
+  .winner-card span {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .winners-right table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .winners-right th, .winners-right td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+  }
+  
+  .winners-right th {
+    background: #d92027;
+    color: #fff;
+  }
+  
+  /* FAQ Section */
+  .faq {
+    padding: 3rem 0;
+  }
+  
+  .faq h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .faq-item {
+    background: #fafafa;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #222;
+    color: #bbb;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .social-links p, .footer-download p {
+    margin-bottom: 1rem;
+  }
+  
+  .social-icons img, .download-buttons img {
+    width: 30px;
+    margin: 0 0.5rem;
+  }
+  
+  .footer-warning {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main-nav ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .winners-grid {
+      flex-direction: column;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+  
+  /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Top Bar */
+  .top-bar {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    font-size: 14px;
+  }
+  
+  .top-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .top-left img.mobile-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .top-right img.small-logo {
+    height: 30px;
+  }
+  
+  /* Main Header */
+  .main-header {
+    background-color: #ffffff;
+    padding: 10px 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .member-text {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .header-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .login-btn {
+    background: transparent;
+    border: 1px solid red;
+    color: red;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .register-btn {
+    background: red;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .header-buttons {
+      justify-content: center;
+    }
+  }
+
+/**header new updates**/
+.top-bar span {
+    padding: 10px;
+    background: #eeeeee;
+    border-radius: 10px;
+}
+img.mobile-icon {
+    vertical-align: middle;
+}
