@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HF Markets</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <div class="top-bar">
-        <div class="top-left"></div>
-        <div class="top-right">
-          <span> <img src="images/downloadMobileIcon.svg" alt="Mobile App" class="mobile-icon"> Download App</span>
-          <span>Contact Us</span>
-          <span>Partner With Us</span>
-          <img src="images/flag.svg" alt="Small Logo" class="small-logo">
-        </div>
-        <!-- <div class="top-right">
-          <img src="images/flag.svg" alt="Small Logo" class="small-logo">
-        </div> -->
-      </div>
+
   <!-- HEADER -->
   <header class="main-header">
+    <div class="top-bar">
+      <div class="top-left"></div>
+      <div class="top-right">
+        <span> <img src="images/downloadMobileIcon.svg" alt="Mobile App" class="mobile-icon"> Download App</span>
+        <span>Contact Us</span>
+        <span>Partner With Us</span>
+        <img src="images/flag.svg" alt="Small Logo" class="small-logo">
+      </div>
+      <!-- <div class="top-right">
+        <img src="images/flag.svg" alt="Small Logo" class="small-logo">
+      </div> -->
+    </div>
     <div class="member-text">
       Member of HF Markets Group
     </div>
@@ -46,41 +49,46 @@
   </header>
 
   <!-- HERO SECTION -->
- <!-- Hero Section -->
- <section class="hero-section">
+  <!-- Hero Section -->
+  <section class="hero-section">
     <div class="overlay">
       <div class="hero-content">
-        <h1>Lorem Ipsum Dolor</h1>
+        <!-- <h1>Lorem Ipsum Dolor</h1> -->
+        <img src="images/Lorem ipsum dolor.svg" alt="Lorem Ipsum Dolor">
         <h2>Sit Amet Tosik</h2>
-  
+
         <form class="hero-form">
-          <div class="form-left">
-            <input type="text" placeholder="First Name" required>
-            <select id="country" required>
-              <option value="">Select Country</option>
-              <option value="IN">India</option>
-              <option value="US">United States</option>
-              <option value="UK">United Kingdom</option>
-            </select>
-            <input type="email" placeholder="Email Address" required>
-  
-            <div class="checkbox">
-              <input type="checkbox" id="terms" required>
-              <label for="terms">I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms and Conditions</a></label>
+          <h2>Lorem ipsum dolor sit amet</h2>
+          <div class="form-body">
+            <div class="form-left">
+              <input type="text" placeholder="First Name" required>
+              <select id="country" required>
+                <option value="">Select Country</option>
+                <option value="IN">India</option>
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+              </select>
+              <input type="email" placeholder="Email Address" required>
+              <small id="email-error" style="color: red; display: none;">Invalid email address</small>
+
+            </div>
+
+            <div class="form-right">
+              <input type="text" placeholder="Last Name" required>
+
+              <div class="phone-input">
+                <input type="text" id="country-code" placeholder="+91" readonly>
+                <input type="text" id="phone" placeholder="Phone Number" required>
+              </div>
+
+              <input type="text" placeholder="Experience" required>
             </div>
           </div>
-  
-          <div class="form-right">
-            <input type="text" placeholder="Last Name" required>
-            
-            <div class="phone-input">
-              <input type="text" id="country-code" placeholder="+91" readonly>
-              <input type="text" id="phone" placeholder="Phone Number" required>
-            </div>
-  
-            <input type="text" placeholder="Experience" required>
+          <div class="checkbox">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">I have read and accepted the <a href="#">Privacy Policy</a> and <a href="#">Terms and
+                Conditions</a></label>
           </div>
-  
           <div class="join-now">
             <button type="submit">Join Now</button>
           </div>
@@ -88,29 +96,36 @@
       </div>
     </div>
   </section>
-  
+
 
   <!-- FEATURES SECTION -->
-  <section class="features">
+  <section class="features bgGray">
     <div class="container features-grid">
-      <div class="feature-item">
-        <img src="images/account 1.svg" alt="Icon 1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <div class="features-left">
+        <div class="feature-item">
+          <img src="images/account 1.svg" alt="Icon 1">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <div class="feature-item">
+          <img src="images/money.svg" alt="Icon 2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
       </div>
-      <div class="feature-phone">
-        <img src="images/mobile.svg" alt="Phone">
+      <div class="features-middle">
+        <div class="feature-phone">
+          <img src="images/mobile.svg" alt="Phone">
+        </div>
       </div>
-      <div class="feature-item">
-        <img src="images/money.svg" alt="Icon 2">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-      </div>
-      <div class="feature-item">
-        <img src="images/trading.svg" alt="Icon 3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-      </div>
-      <div class="feature-item">
-        <img src="images/account 1.svg" alt="Icon 4">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+
+      <div class="features-right">
+        <div class="feature-item">
+          <img src="images/trading.svg" alt="Icon 3">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <div class="feature-item">
+          <img src="images/account 1.svg" alt="Icon 4">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
       </div>
     </div>
   </section>
@@ -137,6 +152,11 @@
         </div>
       </div>
       <button class="btn join-now">Join Now</button>
+      <div>
+        <label for="terms">Terms and Conditions apply
+        </label>
+
+      </div>
     </div>
   </section>
 
@@ -145,23 +165,56 @@
     <div class="container winners-grid">
       <div class="winners-left">
         <div class="winner-card">
-          <h4>January 1st Winner</h4>
-          <p>John Smith</p>
-          <p>Total Gain of 1634%</p>
-          <span>$1000</span>
+          <div class="winner-card-left">
+            <img src="images/trophy-01.svg" alt="Winner Image">
+            <div class="winner-text">
+              <h4>January 1st Winner</h4>
+              <p>John Smith</p>
+              <p>Total Gain of 1634%</p>
+              <span>$1000</span>
+            </div>
+          </div>
+          <div class="winner-card-right">
+            <img src="images/Rectangle.svg" alt="Prize Image">
+            <div class="prize-amount">$1000</div>
+          </div>
         </div>
+
         <div class="winner-card">
-          <h4>January 2nd Winner</h4>
-          <p>John Smith</p>
-          <p>Total Gain of 1534%</p>
-          <span>$1000</span>
+          <div class="winner-card-left">
+            <img src="images/trophy-02.svg" alt="Winner Image">
+            <div class="winner-text">
+              <h4>January 2nd Winner</h4>
+              <p>John Smith</p>
+              <p>Total Gain of 1534%</p>
+              <span>$1000</span>
+            </div>
+            <div class="winner-card-right">
+              <img src="images/Rectangle.svg" alt="Prize Image">
+              <div class="prize-amount">$1000</div>
+            </div>
+          </div>
         </div>
+
         <div class="winner-card">
+          <div class="winner-card-left">
+            <img src="images/trophy-03.svg" alt="Winner Image">
+          <div class="winner-text">
           <h4>January 3rd Winner</h4>
           <p>John Smith</p>
           <p>Total Gain of 1434%</p>
           <span>$1000</span>
+
+          <div class="winner-card-right">
+            <img src="images/Rectangle.svg" alt="Prize Image">
+            <div class="prize-amount">$1000</div>
+          </div>
         </div>
+        </div>
+
+
+
+      </div>
       </div>
       <div class="winners-right">
         <h4>Aliquam Lorem Ant</h4>
@@ -173,21 +226,54 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>John Smith</td><td>1634.19%</td></tr>
-            <tr><td>John Smith</td><td>1033.63%</td></tr>
-            <tr><td>John Smith</td><td>653.47%</td></tr>
-            <tr><td>John Smith</td><td>169.20%</td></tr>
-            <tr><td>John Smith</td><td>158.62%</td></tr>
-            <tr><td>John Smith</td><td>124.50%</td></tr>
-            <tr><td>John Smith</td><td>71.47%</td></tr>
-            <tr><td>John Smith</td><td>67.05%</td></tr>
-            <tr><td>John Smith</td><td>62.30%</td></tr>
-            <tr><td>John Smith</td><td>61.74%</td></tr>
+            <tr>
+              <td>John Smith</td>
+              <td>1634.19%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>1033.63%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>653.47%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>169.20%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>158.62%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>124.50%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>71.47%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>67.05%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>62.30%</td>
+            </tr>
+            <tr>
+              <td>John Smith</td>
+              <td>61.74%</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </div>
     <button class="btn join-now">Join Now</button>
+    <div>
+      <label for="terms">Terms and Conditions apply
+      </label>
   </section>
 
   <!-- FAQ SECTION -->
@@ -195,20 +281,20 @@
     <div class="container">
       <h2>FAQs</h2>
       <div class="faq-item">
-        <h4>Question A</h4>
-        <p>Answer A</p>
+        <h4 class="faq-question" onclick="toggleAnswer(this)">Question A</h4>
+        <p class="faq-answer"></p>>Answer A</p>
       </div>
       <div class="faq-item">
-        <h4>Question B</h4>
-        <p>Answer B</p>
+        <h4 class="faq-question">Question B</h4>
+        <p class="faq-answer"></p>>Answer B</p>
       </div>
       <div class="faq-item">
-        <h4>Question C</h4>
-        <p>Answer C</p>
+        <h4 class="faq-question">Question C</h4>
+        <p class="faq-answer"></p>>Answer C</p>
       </div>
       <div class="faq-item">
-        <h4>Question D</h4>
-        <p>Answer D</p>
+        <h4 class="faq-question">Question D</h4>
+        <p class="faq-answer"></p>>Answer D</p>
       </div>
     </div>
   </section>
@@ -220,23 +306,78 @@
         <p>Find us on</p>
         <div class="social-icons">
           <img src="images/socialmedia.svg" alt="Facebook">
-          <!-- <img src="images/youtube.png" alt="YouTube">
-          <img src="images/linkedin.png" alt="LinkedIn">
-          <img src="images/instagram.png" alt="Instagram"> -->
         </div>
-      </div>
-      <div class="footer-download">
-        <p>Download HFM App</p>
-        <div class="download-buttons">
-          <img src="images/appstore 2.svg" alt="App Store">
-          <img src="images/googleplay 2.svg" alt="Google Play">
         </div>
-      </div>
+
+        <div class="footer-download">
+          <p>Download HFM App</p>
+          <div class="download-buttons">
+            <img src="images/appstore 2.svg" alt="App Store">
+            <img src="images/googleplay 2.svg" alt="Google Play">
+          </div>
+        </div>
+    
+     
       <div class="footer-warning">
-        <p>Risk Warning: Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
+        <h3>Risk Warning:</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pLorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu p</p>
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <!-- Script for validation and country code prefill -->
+  <script>
+  $(document).ready(function() {
+  
+    // Country selection -> Prefill country code
+    $('#country').change(function() {
+      const selected = $(this).val();
+      const countryCodeInput = $('#country-code');
+  
+      if (selected === 'IN') {
+        countryCodeInput.val('+91');
+      } else if (selected === 'US') {
+        countryCodeInput.val('+1');
+      } else if (selected === 'UK') {
+        countryCodeInput.val('+44');
+      } else {
+        countryCodeInput.val('');
+      }
+    });
+  //email
+    $('#email').on('keyup', function() {
+    const email = $(this).val();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const errorMsg = $('#email-error');
+
+    if (emailPattern.test(email) || email.length === 0) {
+      errorMsg.hide();
+    } else {
+      errorMsg.show();
+    }
+  });
+  $('#heroForm').submit(function(e) {
+    const email = $('#email').val();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phone = $('#phone').val();
+
+    if (!emailPattern.test(email)) {
+      e.preventDefault();
+      alert('Please enter a valid email address.');
+      return false;
+    }
+
+    if (!/^\d+$/.test(phone)) {
+      e.preventDefault();
+      alert('Please enter a valid phone number (digits only).');
+      return false;
+    }
+  });
+
+});
+  
+  </script>
 </body>
+
 </html>

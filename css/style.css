@@ -18,6 +18,32 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+  .features-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .features-left,
+  .features-middle,
+  .features-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* space between items */
+    padding-top: 10px;
+  }
+  
+  .feature-item {
+    max-width: 250px;
+  }
+  
+  .feature-phone img {
+    max-width: 300px; /* control phone image size */
+    height: auto;
+  }
+  
   
   /* Buttons */
   .btn {
@@ -40,8 +66,8 @@
   }
   
   .btn.join-now {
-    background: #d92027;
-    color: #fff;
+    background:#179149;
+    color: #FFFFFF;
     margin-top: 1rem;
   }
   
@@ -100,7 +126,7 @@
   
   /* Hero Section */
 .hero-section {
-    background-image: url('images/mainimage.svg'); /* <-- Your exported image here */
+    background-image: url('../images/mainimage.svg'); /* <-- Your exported image here */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,15 +164,32 @@
   .hero-content h2 {
     font-size: 28px;
     margin-bottom: 40px;
+    color: #000;
   }
   
   .hero-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  background: white;
+  padding: 100px 20px 50px;
   }
   
+  .hero-form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .form-body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 800px;
+  }
+
   .form-left, .form-right {
     display: flex;
     flex-direction: column;
@@ -157,9 +200,9 @@
   .hero-form input, 
   .hero-form select {
     padding: 12px;
-    border: none;
+    border: 1px solid #000 !important;
     border-radius: 5px;
-    width: 100%;
+    /* width: 100%; */
   }
   
   .phone-input {
@@ -178,21 +221,31 @@
   .checkbox {
     font-size: 14px;
     text-align: left;
-    color: white;
+    color: #000;
   }
   
-  .checkbox a {
+  /* .checkbox a {
     color: #ffcc00;
     text-decoration: underline;
+  } */
+  .checkbox a {
+    color: red;
+    text-decoration: underline;
   }
+  label {
+    color: #999999;
+}
   
   .join-now {
-    width: 100%;
-    margin-top: 30px;
+    /* width: 100%;
+    margin-top: 30px; */
+    text-align: center;
+    width: 300px;
+    height: 50px;
   }
   
   .join-now button {
-    background-color: red;
+    background-color: #179149;
     color: white;
     border: none;
     padding: 15px 40px;
@@ -250,7 +303,7 @@
   
   /* Winners Section */
   .winners {
-    background: #f5f5f5;
+    background: #F4F4F4;
     padding: 3rem 0;
     text-align: center;
   }
@@ -267,14 +320,59 @@
     min-width: 300px;
   }
   
+  .winners-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   .winner-card {
     background: #fff;
-    margin-bottom: 1rem;
-    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    align-items: center;
+    padding: 8px 12px; 
+    border: 1px solid #ccc;
     border-radius: 8px;
-    text-align: left;
   }
-  
+  .winner-card-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .winner-card-left img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+  .winner-text h4 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .winner-text p, 
+.winner-text span {
+  margin: 4px 0;
+  font-size: 14px;
+}
+.winner-card-right {
+  position: relative;
+}
+.winner-card-right img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.prize-amount {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+  font-size: 12px;
+}
+
   .winner-card h4 {
     color: #d92027;
     margin-bottom: 0.5rem;
@@ -290,15 +388,28 @@
     width: 100%;
     border-collapse: collapse;
   }
-  
-  .winners-right th, .winners-right td {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
+  .winners-right h4 {
+    text-align: left;
+    margin-bottom: 10px; /* space between heading and table */
   }
   
+  
+  .winners-right th, .winners-right td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+   
+  }
+  .winners-right th:first-child,
+.winners-right td:first-child {
+  text-align: left; /* Name column left */
+}
+
+.winners-right th:last-child,
+.winners-right td:last-child {
+  text-align: right; /* Gain column right */
+}
   .winners-right th {
-    background: #d92027;
-    color: #fff;
+    color: #CD0511;
   }
   
   /* FAQ Section */
@@ -317,7 +428,18 @@
     padding: 1rem;
     border-radius: 8px;
   }
-  
+
+  .faq-answer {
+    display: none; /* Hide the answers by default */
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: bold;
+}
+
   /* Footer */
   .footer {
     background: #222;
@@ -330,18 +452,33 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 2rem;
+    /* gap: 2rem; */
     align-items: center;
   }
   
-  .social-links p, .footer-download p {
-    margin-bottom: 1rem;
-  }
-  
-  .social-icons img, .download-buttons img {
-    width: 30px;
-    margin: 0 0.5rem;
-  }
+  .social-links, .footer-download, .footer-warning {
+    flex: 1;
+    padding: 10px;
+}
+.social-icons {
+  display: flex;
+  gap: 15px; /* Adds space between social icons */
+}
+.social-icon {
+  width: 40px; /* Increase the size of the icons */
+  height: 40px; /* Ensure icons maintain their aspect ratio */
+  object-fit: cover;
+}
+.download-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center; /* Center the download buttons */
+}
+
+.download-icon {
+  width: 120px; /* Adjust the size of the app store buttons */
+  height: auto;
+}
   
   .footer-warning {
     font-size: 0.8rem;
@@ -387,7 +524,7 @@
   
   /* Top Bar */
   .top-bar {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -409,10 +546,12 @@
   .top-right img.small-logo {
     height: 30px;
   }
-  
+  img.small-logo {
+    vertical-align: middle;
+}
   /* Main Header */
   .main-header {
-    background-color: #ffffff;
+    background: #161616;
     padding: 10px 50px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
@@ -440,7 +579,7 @@
   
   .nav-links a {
     text-decoration: none;
-    color: #333;
+    color:  #EEEEEE;
     font-size: 16px;
   }
   
@@ -459,7 +598,7 @@
   }
   
   .register-btn {
-    background: red;
+    background: #179149;
     border: none;
     color: white;
     padding: 8px 16px;
@@ -487,9 +626,12 @@
 /**header new updates**/
 .top-bar span {
     padding: 10px;
-    background: #eeeeee;
+    color: #EEEEEE;
     border-radius: 10px;
 }
 img.mobile-icon {
     vertical-align: middle;
+}
+.bgGray{
+  background: #F4F4F4;
 }
